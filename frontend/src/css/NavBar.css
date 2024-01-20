@@ -1,0 +1,35 @@
+.nav-bar{
+    display: flex;
+    height: 65px;
+    position: sticky;
+    top: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+
+.nav-left > div, .nav-right > div{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.title{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}

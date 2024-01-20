@@ -1,0 +1,29 @@
+.register-login-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+    margin: auto;
+    padding-top: 15vh;
+}
+
+.register-or-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-or-login > div{
+    font-size: 1rem;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.under-line{
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.register-login-outer-box{
+    max-width: 500px;
+    background-color: var(--secondary-color);
+    height: calc(100vh - 65px);
+}

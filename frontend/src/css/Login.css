@@ -1,0 +1,33 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login-form>input {
+    background-color: var(--bg-color);
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin: 2px 0px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-size: 0.9rem;
+}
+
+.login-form>input:focus{
+    border: 2px solid var(--primary-color);
+}
+
+.login-form button{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 0.6rem;
+    font-size: 1rem;
+    align-self: center;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}

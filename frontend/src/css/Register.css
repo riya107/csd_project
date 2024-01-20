@@ -1,0 +1,54 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.register-form>input {
+    background-color: var(--bg-color);
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin: 2px 0px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-size: 0.9rem;
+}
+
+.register-form>input:focus{
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+.register-form select:focus{
+    border: 2px solid var(--primary-color);
+}
+
+.register-form select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    background: var(--bg-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px 0px;
+}
+
+.register-form label{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.register-form button{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 0.6rem;
+    font-size: 1rem;
+    align-self: center;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
