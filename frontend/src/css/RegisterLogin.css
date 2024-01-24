@@ -27,3 +27,7 @@
     background-color: var(--secondary-color);
     height: calc(100vh - 65px);
 }
+
+.register-or-login > div{
+    cursor: pointer;
+}

@@ -8,7 +8,7 @@ const NavBar = () => {
     <div>
       <div className="nav-bar">
         <div className="nav-left">
-          <GiHamburgerMenu size={30}/>
+          <GiHamburgerMenu className="ham-burger" size={30}/>
           <div className="title"><b>IIT Bhilai</b> Food Delivery Service</div>
         </div>
         <div className="nav-right">
