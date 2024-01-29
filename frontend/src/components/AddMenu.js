@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import { useState } from "react";
 
 const AddMenu = () => {
-  const [picture, setPicture] = useState(null);
+  const [image, setImage] = useState(null);
   const [itemName, setItemName] = useState('');
   const [type, setType] = useState('');
 
@@ -30,12 +30,12 @@ const AddMenu = () => {
           <Form.Check inline label="Non-veg" type={"radio"} name="type" onChange={()=>{setType('Non-veg')}} checked={type==='Non-veg'} />
         </Container>
 
-        <Form.Group controlId="picture">
+        <Form.Group controlId="">
           <Form.Label className="col-p mt-4">Upload Picture</Form.Label>
           <Form.Control
             type="file"
             accept=".jpg,.jpeg,.png"
-            onChange={(e) => setPicture(e.target.files[0])}
+            onChange={(e) => setImage(e.target.files[0])}
             className="mb-3"
           />
         </Form.Group>

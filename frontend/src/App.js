@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import AddMenu from "./components/AddMenu";
+import Restaurants from "./components/Restaurants";
+import FoodItems from "./components/FoodItems";
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<NavBar/>}>
-            <Route index element={<AddMenu/>}></Route>
+            <Route index element={<Home/>}></Route>
           </Route>
         </Routes>
       </Router>

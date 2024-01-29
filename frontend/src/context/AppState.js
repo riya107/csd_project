@@ -1,12 +1,11 @@
-// import { useState } from "react";
+import { useState } from "react";
 import AppContext from "./AppContext";
 
 const AppState = (props) => {
-//   const [user, setUser] = useState(null);
-//   const [sideBarState, setSideBarState] = useState("close");
+  const [user, setUser] = useState(null);
 
   return (
-    <AppContext.Provider>
+    <AppContext.Provider value={{ user, setUser }}>
       {props.children}
     </AppContext.Provider>
   );
