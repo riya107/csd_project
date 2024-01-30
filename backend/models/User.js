@@ -24,6 +24,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    food_items:{
+      type:[{
+        type: mongoose.Schema.ObjectId,
+        ref: "FoodItem",
+      }],
+      default: undefined
+    }
   },
   { timestamps: true }
 );

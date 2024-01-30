@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const res = await userGetterAPI();
-      console.log(res);
       if (res) {
         setUser(res.user);
       }

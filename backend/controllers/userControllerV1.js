@@ -1,5 +1,5 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const User = require("../models/User");
 
@@ -7,21 +7,33 @@ exports.signup = async (req, res) => {
   try {
     const salt = await bcrypt.genSalt(10);
     const secPassword = await bcrypt.hash(req.body.password, salt);
-
-    const user = new User({
+    const userData = {
       name: req.body.name,
       role: req.body.role,
       email: req.body.email,
       password: secPassword,
-      phone_number: req.body.phone_number
-    });
+      phone_number: req.body.phone_number,
+    };
+    if (userData.role === "shop") {
+      userData.food_items = [];
+    }
+    const user = new User(userData);
 
     const createdUser = await user.save();
 
     const token = jwt.sign({ _id: createdUser._id }, process.env.JWT_SECRET);
-    return res
-      .status(201)
-      .json({ success: true, token: token, user:createdUser, message: "process successful" });
+    return res.status(201).json({
+      success: true,
+      token: token,
+      user: {
+        _id: createdUser._id,
+        name: createdUser.name,
+        email: createdUser.email,
+        role: createdUser.role,
+        phone_number: createdUser.phone_number,
+      },
+      message: "process successful",
+    });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ success: false, message: "process failed" });
@@ -31,7 +43,9 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const user = req.body;
-    const userData = await User.findOne({ email: user.email });
+    const userData = await User.findOne({ email: user.email }).select(
+      "_id name email role phone_number password"
+    );
 
     if (!userData) {
       return res
@@ -43,9 +57,14 @@ exports.login = async (req, res) => {
       if (match) {
         const token = jwt.sign({ _id: userData._id }, process.env.JWT_SECRET);
 
-        return res
-          .status(200)
-          .json({ success: true, token:token, user: userData, message: "process successful" });
+        userData.set({password:undefined});
+
+        return res.status(200).json({
+          success: true,
+          token: token,
+          user: userData,
+          message: "process successful",
+        });
       } else {
         return res.status(400).json({
           success: false,
@@ -55,9 +74,7 @@ exports.login = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    return res
-      .status(400)
-      .json({ success: false, message: "process failed" });
+    return res.status(400).json({ success: false, message: "process failed" });
   }
 };
 
@@ -70,20 +87,21 @@ exports.getUser = async (req, res) => {
         .json({ success: false, message: "Unauthorized User" });
     } else {
       const info = jwt.verify(token, process.env.JWT_SECRET);
-      const user = await User.findById({ _id: info._id });
+      const user = await User.findById({ _id: info._id }).select(
+        "_id name email role phone_number"
+      );
+
       if (!user) {
         return res
           .status(401)
           .json({ success: false, message: "Unauthorized User" });
       }
       return res
-      .status(200)
-      .json({ success: true, user:user, message: "process successful" });
+        .status(200)
+        .json({ success: true, user: user, message: "process successful" });
     }
   } catch (error) {
-    console.log(error)
-    return res
-    .status(401)
-    .json({ success: false, message: "process failed" });
+    console.log(error);
+    return res.status(401).json({ success: false, message: "process failed" });
   }
-}
+};

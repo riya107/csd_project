@@ -6,7 +6,7 @@
     align-items: center;
     padding: 1rem;
     background-color: var(--secondary-color);
-    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .food-img{

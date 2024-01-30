@@ -3,9 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import AddMenu from "./components/AddMenu";
+import UpdateMenu from "./components/UpdateMenu";
 import Restaurants from "./components/Restaurants";
 import FoodItems from "./components/FoodItems";
+import RegisterLogin from "./components/RegisterLogin";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Dashboard from "./components/Dashboard";
+import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -14,7 +19,12 @@ function App() {
         <Routes>
           <Route path="/" element={<NavBar/>}>
             <Route index element={<Home/>}></Route>
-            <Route path="/add-menu" element={<AddMenu/>}></Route>
+            <Route path="/dashboard" element={<Dashboard/>}></Route>
+            <Route path="/menu" element={<Menu/>}></Route>
+            <Route path="/update-menu" element={<UpdateMenu/>}></Route>
+            <Route path="/login-register" element={<RegisterLogin/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/contact" element={<Contact/>}></Route>
           </Route>
         </Routes>
       </Router>

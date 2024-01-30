@@ -16,6 +16,7 @@ const NavBar = () => {
     localStorage.removeItem("token");
     setUser(null);
     navigate("/");
+    setSelected("login-register");
   };
 
   return (
@@ -32,6 +33,7 @@ const NavBar = () => {
             <div
               onClick={() => {
                 setSelected("dashboard");
+                navigate("/dashboard");
               }}
               style={{
                 borderBottom:
@@ -43,7 +45,7 @@ const NavBar = () => {
           )}
           {user && user.role === "shop" && (
             <div
-              onClick={() => setSelected("menu")}
+              onClick={() => {setSelected("menu");navigate("/menu");}}
               style={{
                 borderBottom:
                   selected === "menu" && "3px solid var(--primary-color)",
@@ -56,7 +58,7 @@ const NavBar = () => {
             <div
               onClick={() => {
                 setSelected("update-menu");
-                navigate("/add-menu");
+                navigate("/update-menu");
               }}
               style={{
                 borderBottom:
@@ -71,6 +73,7 @@ const NavBar = () => {
             <div
               onClick={() => {
                 setSelected("login-register");
+                navigate("/login-register");
               }}
               style={{
                 borderBottom:
@@ -83,6 +86,7 @@ const NavBar = () => {
           <div
             onClick={() => {
               setSelected("about");
+              navigate("/about");
             }}
             style={{
               borderBottom:
@@ -94,6 +98,7 @@ const NavBar = () => {
           <div
             onClick={() => {
               setSelected("contact");
+              navigate("/contact");
             }}
             style={{
               borderBottom:

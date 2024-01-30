@@ -2,8 +2,10 @@ import "../css/Register.css";
 import { useState, useContext } from "react";
 import {registerAPI} from "../api-calls/user-api-calls";
 import AppContext from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [registerUser, setRegisterUser] = useState({
     name: "",
     role: "customer",
@@ -25,6 +27,7 @@ const Register = () => {
       setUser(res.user);
       localStorage.setItem("token",res.token);
       alert("Registration Successful!");
+      navigate("/");
     }
     else{
       alert("Recheck your details!");

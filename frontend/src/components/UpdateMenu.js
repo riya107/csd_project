@@ -1,15 +1,35 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import { updateMenuAPI } from "../api-calls/shop-api-calls";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddMenu = () => {
+  const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [itemName, setItemName] = useState('');
+  const [itemPrice, setItemPrice] = useState('');
   const [type, setType] = useState('');
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('itemName', itemName);
+    formData.append('itemPrice', itemPrice);
+    formData.append('type', type);
+    formData.append('image', image);
+
+    const success = await updateMenuAPI(formData);
+    if (success) {
+      alert("New item added in menu!");
+      navigate('/');
+    } else {
+      alert("Something went wrong, retry!");
+    }
+  }
 
   return (
     <Container>
@@ -21,6 +41,16 @@ const AddMenu = () => {
             placeholder="Enter Food Item Name"
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
+            className="mb-3"
+          />
+        </Form.Group>
+        <Form.Group controlId="itemPrice">
+          <Form.Label className="col-p mt-5">Price</Form.Label>
+          <Form.Control
+            type="number"
+            placeholder="Enter Price"
+            value={itemPrice}
+            onChange={(e) => setItemPrice(e.target.value)}
             className="mb-3"
           />
         </Form.Group>
