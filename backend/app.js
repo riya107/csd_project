@@ -4,6 +4,10 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 
+const userRouter = require("./routes/userRouterV1");
+const shopRouter = require("./routes/shopRouterV1");
+const customerRouter = require("./routes/customerRouterV1");
+
 const app = express();
 
 mongoose
@@ -19,11 +23,9 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  return res.status(200).json({
-    message: "Hello",
-  });
-});
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/shop", shopRouter);
+app.use("/api/v1/customer", customerRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is Running on port ${process.env.PORT}.`);

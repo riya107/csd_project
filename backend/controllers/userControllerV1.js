@@ -1,3 +1,6 @@
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 const User = require("../models/User");
 
 exports.signup = async (req, res) => {
@@ -16,16 +19,9 @@ exports.signup = async (req, res) => {
     const createdUser = await user.save();
 
     const token = jwt.sign({ _id: createdUser._id }, process.env.JWT_SECRET);
-
     return res
-      .cookie("token", token, {
-        expires: new Date(Date.now() + 86400000),
-        sameSite: "none",
-        httpOnly: true,
-        secure: true,
-      })
       .status(201)
-      .json({ success: true, message: "process successful" });
+      .json({ success: true, token: token, user:createdUser, message: "process successful" });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ success: false, message: "process failed" });
@@ -48,14 +44,8 @@ exports.login = async (req, res) => {
         const token = jwt.sign({ _id: userData._id }, process.env.JWT_SECRET);
 
         return res
-          .cookie("token", token, {
-            expires: new Date(Date.now() + 86400000),
-            sameSite: "none",
-            httpOnly: true,
-            secure: true,
-          })
           .status(200)
-          .json({ success: true, message: "process successful" });
+          .json({ success: true, token:token, user: userData, message: "process successful" });
       } else {
         return res.status(400).json({
           success: false,
@@ -66,7 +56,34 @@ exports.login = async (req, res) => {
   } catch (error) {
     console.log(error);
     return res
-      .status(500)
-      .json({ success: false, message: "internal sever error" });
+      .status(400)
+      .json({ success: false, message: "process failed" });
   }
 };
+
+exports.getUser = async (req, res) => {
+  try {
+    const token = req.headers.authorization;
+    if (!token) {
+      return res
+        .status(401)
+        .json({ success: false, message: "Unauthorized User" });
+    } else {
+      const info = jwt.verify(token, process.env.JWT_SECRET);
+      const user = await User.findById({ _id: info._id });
+      if (!user) {
+        return res
+          .status(401)
+          .json({ success: false, message: "Unauthorized User" });
+      }
+      return res
+      .status(200)
+      .json({ success: true, user:user, message: "process successful" });
+    }
+  } catch (error) {
+    console.log(error)
+    return res
+    .status(401)
+    .json({ success: false, message: "process failed" });
+  }
+}

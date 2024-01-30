@@ -1,14 +1,23 @@
 import RegisterLogin from "./RegisterLogin";
 import Sample from "./Sample";
-
-const user = null;
+import AppContext from "../context/AppContext";
+import { useContext, useEffect } from "react";
+import { userGetterAPI } from "../api-calls/user-api-calls";
 
 const Home = () => {
-    return ( 
-        <div>
-            {user?<Sample/>:<RegisterLogin/>}
-        </div>
-     );
-}
- 
+  const { user, setUser } = useContext(AppContext);
+
+  useEffect(() => {
+    (async () => {
+      const res = await userGetterAPI();
+      console.log(res);
+      if (res) {
+        setUser(res.user);
+      }
+    })();
+  }, [setUser]);
+
+  return <div>{user ? <Sample /> : <RegisterLogin />}</div>;
+};
+
 export default Home;
