@@ -1,9 +1,10 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-
+const logger = require("../logger");
 const User = require("../models/User");
 
 exports.signup = async (req, res) => {
+  logger.info("Request came for signup");
   try {
     const salt = await bcrypt.genSalt(10);
     const secPassword = await bcrypt.hash(req.body.password, salt);
@@ -35,12 +36,13 @@ exports.signup = async (req, res) => {
       message: "process successful",
     });
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res.status(400).json({ success: false, message: "process failed" });
   }
 };
 
 exports.login = async (req, res) => {
+  logger.info("Request came for login");
   try {
     const user = req.body;
     const userData = await User.findOne({ email: user.email }).select(
@@ -73,12 +75,13 @@ exports.login = async (req, res) => {
       }
     }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res.status(400).json({ success: false, message: "process failed" });
   }
 };
 
 exports.getUser = async (req, res) => {
+  logger.info("Request came for getting user");
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -101,7 +104,7 @@ exports.getUser = async (req, res) => {
         .json({ success: true, user: user, message: "process successful" });
     }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res.status(401).json({ success: false, message: "process failed" });
   }
 };

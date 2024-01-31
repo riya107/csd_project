@@ -1,4 +1,4 @@
-.nav-bar{
+.nav-bar {
     display: flex;
     height: 65px;
     position: sticky;
@@ -10,34 +10,35 @@
     font-size: 1.2rem;
 }
 
-.nav-left{
+.nav-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1rem;
 }
 
-.nav-right{
+.nav-right {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1rem;
 }
 
-.nav-left > div, .nav-right > div{
+.nav-left>div,
+.nav-right>div {
     padding: 1rem;
     margin: 1rem;
 }
 
-.title{
+.title {
     font-size: 1.5rem;
     color: var(--primary-color);
 }
 
-.ham-burger{
+.ham-burger {
     cursor: pointer;
 }
 
-.nav-right > div{
+.nav-right>div {
     cursor: pointer;
 }

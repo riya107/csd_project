@@ -15,12 +15,12 @@
     font-size: 0.9rem;
 }
 
-.register-form>input:focus{
+.register-form>input:focus {
     outline: none;
     border: 2px solid var(--primary-color);
 }
 
-.register-form select:focus{
+.register-form select:focus {
     border: 2px solid var(--primary-color);
 }
 
@@ -34,13 +34,13 @@
     margin: 2px 0px;
 }
 
-.register-form label{
+.register-form label {
     font-weight: bold;
     font-size: 1rem;
     margin-top: 10px;
 }
 
-.register-form button{
+.register-form button {
     cursor: pointer;
     background-color: var(--secondary-color);
     width: fit-content;

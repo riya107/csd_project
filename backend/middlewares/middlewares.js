@@ -11,8 +11,10 @@ const firebase_app = initializeApp(firebaseConfig);
 const jwt = require("jsonwebtoken");
 
 const User = require("../models/User");
+const logger = require("../logger");
 
 exports.restrict = async (req, res, next) => {
+  logger.info("Inside restrict middleware");
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -31,7 +33,7 @@ exports.restrict = async (req, res, next) => {
       next();
     }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal sever error" });
@@ -39,41 +41,41 @@ exports.restrict = async (req, res, next) => {
 };
 
 exports.allowOnlyCustomers = (req, res, next) => {
-    if(req.user.role==="customer"){
-        next();
-    }
-    else{
-      return res
+  logger.info("Inside allowOnlyCustomers middleware");
+  if (req.user.role === "customer") {
+    next();
+  } else {
+    return res
       .status(401)
       .json({ success: false, message: "Unauthorized User" });
-    }
+  }
 };
 
 exports.allowOnlyShops = (req, res, next) => {
-    if(req.user.role==="shop"){
-        next();
-    }
-    else{
-      return res
+  logger.info("Inside allowOnlyShops middleware");
+  if (req.user.role === "shop") {
+    next();
+  } else {
+    return res
       .status(401)
       .json({ success: false, message: "Unauthorized User" });
-    }
+  }
 };
 
 exports.uploadInFirebase = async (req, res, next) => {
+  logger.info("Inside uploadInFirebase middleware");
   const file = req.file;
   const fileName = Date.now() + "-" + file.originalname;
   const storage = getStorage(firebase_app);
   const storageRef = ref(storage, "uploads/" + fileName);
-  
+
   try {
     await uploadBytes(storageRef, file.buffer);
     const url = await getDownloadURL(storageRef);
     req.image = url;
     next();
   } catch (error) {
-    console.error("Error:", error);
+    logger.error(error);
     return res.status(500).json({ success: false, message: "Upload failed" });
   }
-  
 };

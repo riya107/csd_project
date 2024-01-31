@@ -1,5 +1,5 @@
 import RegisterLogin from "./RegisterLogin";
-import Sample from "./Sample";
+import WelcomePage from "./WelcomePage";
 import AppContext from "../context/AppContext";
 import { useContext, useEffect } from "react";
 import { userGetterAPI } from "../api-calls/user-api-calls";
@@ -16,7 +16,7 @@ const Home = () => {
     })();
   }, [setUser]);
 
-  return <div>{user ? <Sample /> : <RegisterLogin />}</div>;
+  return <div>{user ? <WelcomePage /> : <RegisterLogin />}</div>;
 };
 
 export default Home;

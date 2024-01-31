@@ -4,6 +4,8 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 
+const logger = require("./logger");
+
 const userRouter = require("./routes/userRouterV1");
 const shopRouter = require("./routes/shopRouterV1");
 const customerRouter = require("./routes/customerRouterV1");
@@ -15,9 +17,9 @@ mongoose
     dbName: "campusFoodDeliveryService",
   })
   .then(() => {
-    console.log("Connected to the Database.");
+    logger.info("Connected to the database");
   })
-  .catch((err) => console.error(err));
+  .catch((error) => logger.error(error));
 
 app.use(cors());
 
@@ -28,5 +30,5 @@ app.use("/api/v1/shop", shopRouter);
 app.use("/api/v1/customer", customerRouter);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server is Running on port ${process.env.PORT}.`);
+  logger.info(`Server is running on port ${process.env.PORT}`);
 });

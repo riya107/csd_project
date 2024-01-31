@@ -1,0 +1,26 @@
+.welcome-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.1s ease;
+    background: url('https://c4.wallpaperflare.com/wallpaper/899/593/118/cuisine-food-india-indian-wallpaper-preview.jpg') center/cover no-repeat;
+}
+
+.welcome-text {
+    font-size: 5em;
+    color: #e5e7ed;
+    transition: color 0.1s ease;
+    align-items: top;
+    padding-bottom: 250px;
+
+}
+
+.welcome-container:hover {
+    background-color: #d4d4d4;
+}
+
+.welcome-container:hover .welcome-text {
+    color: hwb(214 95% 3%);
+}

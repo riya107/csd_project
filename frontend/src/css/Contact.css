@@ -1,0 +1,38 @@
+/* ContactPage.css */
+
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.header-style {
+    color: var(--primary-color);
+}
+
+.section-style {
+    margin-bottom: 35px;
+}
+
+.link-style {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.p-style {
+    margin-bottom: 0;
+}
+
+.p2-style {
+    margin-top: 0;
+}

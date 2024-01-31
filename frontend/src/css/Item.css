@@ -1,4 +1,4 @@
-.food-card{
+.food-card {
     max-width: 400px;
     display: flex;
     flex-direction: row;
@@ -9,13 +9,13 @@
     border-bottom: 1px solid var(--primary-color);
 }
 
-.food-img{
+.food-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-.adder{
+.adder {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 6px;
@@ -24,18 +24,18 @@
     margin-top: 0.4rem;
 }
 
-.adder > div{
+.adder>div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.adder-1{
+.adder-1 {
     border-right: 2px solid black;
     cursor: pointer;
 }
 
-.adder-3{
+.adder-3 {
     border-left: 2px solid black;
     cursor: pointer;
 }

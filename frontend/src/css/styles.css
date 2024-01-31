@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-        --primary-color: #66FCF1;
-        --secondary-color: #1F2833;
-        --bg-color: #0B0C10;
+:root {
+    --primary-color: #66FCF1;
+    --secondary-color: #1F2833;
+    --bg-color: #0B0C10;
 }
 
 body {
@@ -15,18 +15,18 @@ body {
     box-sizing: border-box;
 }
 
-.col-p{
+.col-p {
     color: var(--primary-color);
 }
 
-.col-s{
+.col-s {
     color: var(--secondary-color);
 }
 
-.bg-p{
+.bg-p {
     background-color: var(--primary-color);
 }
 
-.bg-s{
+.bg-s {
     background-color: var(--secondary-color);
 }

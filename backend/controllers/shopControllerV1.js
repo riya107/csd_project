@@ -1,7 +1,9 @@
 const FoodItem = require("../models/FoodItem");
 const User = require("../models/User");
+const logger = require("../logger");
 
 exports.updateMenu = async (req, res) => {
+  logger.info("Request came for updating menu");
   try {
     const foodItem = new FoodItem({
       itemName: req.body.itemName,
@@ -24,7 +26,7 @@ exports.updateMenu = async (req, res) => {
       .status(200)
       .json({ success: true, message: "process successful" });
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res
       .status(500)
       .json({ success: false, message: "internal server error" });
@@ -32,6 +34,7 @@ exports.updateMenu = async (req, res) => {
 };
 
 exports.getMenu = async (req, res) => {
+  logger.info("Request came for getting menu");
   try {
     const shop_id = req.user._id;
     const foodItems = await FoodItem.find({ shop_id });
@@ -43,7 +46,7 @@ exports.getMenu = async (req, res) => {
         message: "process successful",
       });
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     return res
       .status(500)
       .json({ success: false, message: "internal server error" });

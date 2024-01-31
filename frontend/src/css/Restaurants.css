@@ -1,8 +1,8 @@
-.res-box{
+.res-box {
     max-width: 500px;
 }
 
-.res{
+.res {
     cursor: pointer;
     margin: 1rem;
     border: 2px solid var(--primary-color);

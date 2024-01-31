@@ -15,11 +15,11 @@
     font-size: 0.9rem;
 }
 
-.login-form>input:focus{
+.login-form>input:focus {
     border: 2px solid var(--primary-color);
 }
 
-.login-form button{
+.login-form button {
     cursor: pointer;
     background-color: var(--secondary-color);
     width: fit-content;
