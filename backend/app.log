@@ -45,3 +45,16 @@
 [2024-01-30T22:39:34.324Z] [32minfo[39m: Inside allowOnlyShops middleware
 [2024-01-30T22:39:34.325Z] [32minfo[39m: Request came for getting menu
 [2024-01-30T22:39:48.795Z] [32minfo[39m: Request came for getting user
+[2024-01-31T05:42:37.560Z] [32minfo[39m: Server is running on port 5000
+[2024-01-31T05:42:38.642Z] [32minfo[39m: Connected to the database
+[2024-01-31T05:44:34.947Z] [32minfo[39m: Request came for getting user
+[2024-01-31T06:07:17.154Z] [32minfo[39m: Request came for login
+[2024-01-31T06:07:42.236Z] [32minfo[39m: Inside restrict middleware
+[2024-01-31T06:07:42.279Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-01-31T06:07:42.294Z] [32minfo[39m: Inside uploadInFirebase middleware
+[2024-01-31T06:07:44.044Z] [32minfo[39m: Request came for updating menu
+[2024-01-31T06:07:46.996Z] [32minfo[39m: Request came for getting user
+[2024-01-31T06:07:48.298Z] [32minfo[39m: Inside restrict middleware
+[2024-01-31T06:07:48.332Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-01-31T06:07:48.334Z] [32minfo[39m: Request came for getting menu
+[2024-01-31T06:08:05.559Z] [32minfo[39m: Request came for getting user
