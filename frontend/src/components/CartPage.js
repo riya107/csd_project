@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Container, List, ListItem, ListItemText, Typography } from '@mui/material';
 
-//cart data (replace with actual data from your application)
+// Simulated cart data (replace with actual data from your application)
 const simulatedCartData = [
   { id: 1, name: 'Item 1', price: 10.99, quantity: 1 },
   { id: 2, name: 'Item 2', price: 8.99, quantity: 1 },
@@ -43,7 +43,7 @@ const CartPage = () => {
             {cart.map((item) => (
               <ListItem key={item.id}>
                 <ListItemText
-                  primary={`${item.name} - $${item.price.toFixed(2)} x `}
+                  primary={`${item.name} - $${item.price.toFixed(2)}`}
                 />
                 <Box display="flex" alignItems="center">
                   <Button onClick={() => handleDecreaseQuantity(item.id)}>-</Button>
