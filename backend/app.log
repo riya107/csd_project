@@ -914,3 +914,10 @@
 [2024-02-11T09:52:59.063Z] [32minfo[39m: Request came for search
 [2024-02-11T09:53:02.390Z] [32minfo[39m: Request came for shops
 [2024-02-11T09:53:04.106Z] [32minfo[39m: Request came for items of shop wiith ID = 65b92510955f9046292ca2dd
+[2024-02-11T09:55:08.331Z] [32minfo[39m: Server is running on port 5000
+[2024-02-11T09:55:21.206Z] [32minfo[39m: Connected to the database
+[2024-02-11T09:55:28.491Z] [32minfo[39m: Request came for getting user
+[2024-02-11T09:55:36.790Z] [32minfo[39m: Request came for search
+[2024-02-11T09:55:47.171Z] [32minfo[39m: Request came for search
+[2024-02-11T09:55:49.635Z] [32minfo[39m: Request came for shops
+[2024-02-11T09:55:55.040Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
