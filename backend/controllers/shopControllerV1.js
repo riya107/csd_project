@@ -5,6 +5,15 @@ const logger = require("../logger");
 exports.updateMenu = async (req, res) => {
   logger.info("Request came for updating menu");
   try {
+    const existingItem = await FoodItem.find({
+      itemName: req.body.itemName,
+      shop_id: req.user._id,
+    });
+    if(existingItem.length!==0){
+      return res
+      .status(400)
+      .json({ success: false, message: "Duplicate Item" });
+    }
     const foodItem = new FoodItem({
       itemName: req.body.itemName,
       itemPrice: req.body.itemPrice,
@@ -38,13 +47,11 @@ exports.getMenu = async (req, res) => {
   try {
     const shop_id = req.user._id;
     const foodItems = await FoodItem.find({ shop_id });
-    return res
-      .status(200)
-      .json({
-        success: true,
-        foodItems: foodItems,
-        message: "process successful",
-      });
+    return res.status(200).json({
+      success: true,
+      foodItems: foodItems,
+      message: "process successful",
+    });
   } catch (error) {
     logger.error(error);
     return res

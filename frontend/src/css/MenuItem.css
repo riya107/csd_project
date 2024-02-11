@@ -1,0 +1,53 @@
+.food-card{
+    width: 322px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+    color: black;
+}
+
+.food-img{
+    margin-top: 5%;
+    width: 257.6px;
+    height: 285.9px;
+    border-radius: 20px;
+}
+
+.type-name{
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.delete-modify{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 10%;
+    justify-content: space-between;
+}
+
+.menu-item-price{
+    margin-right: 1em;
+}
+
+.menu-item-delete-modify{
+    align-self: flex-end;
+}
+
+.menu-delete{
+    cursor: pointer;
+}
+
+.menu-modify{
+    cursor: pointer;
+}
+
+.menu-delete:hover, .menu-modify :hover{
+    color: rgb(34, 32, 32)
+}

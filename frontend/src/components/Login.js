@@ -19,7 +19,6 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const res = await loginAPI(loginUser);
-    console.log(res);
     if(res){
       setUser(res.user);
       localStorage.setItem("token",res.token);

@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { MdFastfood } from "react-icons/md";
 import AppContext from "../context/AppContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import SearchBox from "./SearchBox";
+import { userGetterAPI } from "../api-calls/user-api-calls";
 
 import "../css/NavBar.css";
 
@@ -10,6 +12,16 @@ const NavBar = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(AppContext);
   const [selected, setSelected] = useState("login-register");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      const res = await userGetterAPI();
+      if (res) {
+        setUser(res.user);
+      }
+    })();
+  }, [setUser]);
 
   const handleLogout = () => {
     setSelected("logout");
@@ -18,12 +30,17 @@ const NavBar = () => {
     navigate("/");
     setSelected("login-register");
   };
-
   return (
     <div>
       <div className="nav-bar">
         <div className="nav-left">
-          <MdFastfood className="ham-burger" size={30} />
+          <MdFastfood
+            onClick={() => {
+              navigate("/");
+            }}
+            className="ham-burger"
+            size={30}
+          />
           <div className="title">
             <b>IIT Bhilai</b> Food Delivery Service
           </div>
@@ -45,7 +62,10 @@ const NavBar = () => {
           )}
           {user && user.role === "shop" && (
             <div
-              onClick={() => {setSelected("menu");navigate("/menu");}}
+              onClick={() => {
+                setSelected("menu");
+                navigate("/menu");
+              }}
               style={{
                 borderBottom:
                   selected === "menu" && "3px solid var(--primary-color)",
@@ -77,11 +97,18 @@ const NavBar = () => {
               }}
               style={{
                 borderBottom:
-                  selected === "login-register" && "3px solid var(--primary-color)",
+                  selected === "login-register" &&
+                  "3px solid var(--primary-color)",
               }}
             >
               Login/Register
             </div>
+          )}
+          {user && user.role === "customer" && (
+            <SearchBox
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
           )}
           <div
             onClick={() => {

@@ -29,7 +29,7 @@ const getMenuAPI = async () => {
       return res.data;
     } catch (error) {
       console.log(error);
-      return [];
+      return null;
     }
   };
   

@@ -8,6 +8,7 @@
     align-items: center;
     background-color: var(--secondary-color);
     font-size: 1.2rem;
+    z-index: 8;
 }
 
 .nav-left {
@@ -40,5 +41,9 @@
 }
 
 .nav-right>div {
+    cursor: pointer;
+}
+
+.cart-icon{
     cursor: pointer;
 }

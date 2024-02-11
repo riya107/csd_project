@@ -17,6 +17,10 @@ exports.signup = async (req, res) => {
     };
     if (userData.role === "shop") {
       userData.food_items = [];
+      const existingUser = await User.find({name:req.body.name});
+      if(existingUser.length!==0){
+        return res.status(400).json({ success: false, message: "Aready a shop with same name!" });
+      }
     }
     const user = new User(userData);
 

@@ -1,0 +1,18 @@
+.food-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 3em;
+}
+
+.shop-items-name{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.place-order{
+    right: 1rem;
+    cursor: pointer;
+}

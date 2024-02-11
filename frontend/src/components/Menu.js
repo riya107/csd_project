@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMenuAPI } from "../api-calls/shop-api-calls";
 import MenuItem from "./MenuItem";
-import "../css/FoodItems.css";
+import "../css/Menu.css";
 
 const Menu = () => {
   const [foodItems, setFoodItems] = useState([]);

@@ -1,0 +1,22 @@
+.q-0-add{
+    display: flex;
+    padding: 0.1rem;
+    cursor: pointer;
+}
+
+.q-not-0-add{
+    display: flex;
+    padding: 0 0.1rem;
+}
+
+.q-not-0-add > div{
+    padding: 0 0.2rem;
+}
+
+.q-not-0-add-plus{
+    cursor: pointer;
+}
+
+.q-not-0-add-minus{
+    cursor: pointer;
+}

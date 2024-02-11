@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import {registerAPI} from "../api-calls/user-api-calls";
 import AppContext from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
+import {verifyRegisterData} from "../utils";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -22,6 +23,10 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if(!verifyRegisterData(registerUser)){
+      alert("Recheck your details!");
+      return ;
+    }
     const res = await registerAPI(registerUser);
     if(res){
       setUser(res.user);
