@@ -22,6 +22,7 @@ const Login = () => {
     if(res){
       setUser(res.user);
       localStorage.setItem("token",res.token);
+      localStorage.setItem("email",loginUser.email);
       alert("Login Successful!");
       navigate("/");
     }

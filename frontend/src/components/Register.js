@@ -31,6 +31,7 @@ const Register = () => {
     if(res){
       setUser(res.user);
       localStorage.setItem("token",res.token);
+      localStorage.setItem("email",registerUser.email);
       alert("Registration Successful!");
       navigate("/");
     }

@@ -13,6 +13,8 @@ import PlaceOrder from "./components/PlaceOrder";
 import SearchResults from "./components/SearchResults"
 import ShopItems from "./components/ShopItems";
 import Shops from "./components/Shops";
+import Cart from "./components/Cart.js";
+
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/shop-items" element={<ShopItems/>}></Route>
             <Route path="/shops" element={<Shops/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
           </Route>
         </Routes>
       </Router>

@@ -111,6 +111,17 @@ const NavBar = () => {
             />
           )}
           <div
+            onClick={()=>{
+              setSelected("cart");
+              navigate("/cart");
+            }}
+            style={{
+              borderBottom:
+                selected === "about" && "3px solid var(--primary-color)",
+            }}>
+            Cart
+          </div>
+          <div
             onClick={() => {
               setSelected("about");
               navigate("/about");

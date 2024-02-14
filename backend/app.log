@@ -921,3 +921,236 @@
 [2024-02-11T09:55:47.171Z] [32minfo[39m: Request came for search
 [2024-02-11T09:55:49.635Z] [32minfo[39m: Request came for shops
 [2024-02-11T09:55:55.040Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-12T10:54:42.330Z] [32minfo[39m: Server is running on port undefined
+[2024-02-12T10:54:42.333Z] [31merror[39m: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2024-02-12T14:12:22.695Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T14:12:23.610Z] [32minfo[39m: Connected to the database
+[2024-02-12T14:13:44.202Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:13:44.203Z] [31merror[39m: jwt malformed
+[2024-02-12T14:14:51.998Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:16:05.967Z] [32minfo[39m: Request came for login
+[2024-02-12T14:25:10.821Z] [32minfo[39m: Request came for login
+[2024-02-12T14:25:17.234Z] [32minfo[39m: Request came for login
+[2024-02-12T14:25:31.595Z] [32minfo[39m: Request came for login
+[2024-02-12T14:29:55.775Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:30:10.627Z] [32minfo[39m: Request came for signup
+[2024-02-12T14:32:17.323Z] [32minfo[39m: Request came for signup
+[2024-02-12T14:32:17.421Z] [31merror[39m: User validation failed: email: Path `email` is required., phone_number: Path `phone_number` is required.
+[2024-02-12T14:32:46.309Z] [32minfo[39m: Request came for signup
+[2024-02-12T14:33:44.338Z] [32minfo[39m: Inside restrict middleware
+[2024-02-12T14:33:44.345Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:33:44.399Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-12T14:33:59.113Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:34:04.466Z] [32minfo[39m: Inside restrict middleware
+[2024-02-12T14:34:04.469Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:34:04.526Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-12T14:34:18.099Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:35:21.826Z] [32minfo[39m: Inside restrict middleware
+[2024-02-12T14:35:21.884Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-12T14:37:56.874Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:40:34.185Z] [32minfo[39m: Request came for search
+[2024-02-12T14:40:43.841Z] [32minfo[39m: Request came for items of shop wiith ID = 65b9252f955f9046292ca2df
+[2024-02-12T14:40:47.723Z] [32minfo[39m: Request came for shops
+[2024-02-12T14:40:51.294Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-12T14:41:46.919Z] [32minfo[39m: Request came for getting user
+[2024-02-12T14:42:00.919Z] [32minfo[39m: Request came for search
+[2024-02-12T14:42:05.831Z] [32minfo[39m: Request came for search
+[2024-02-12T14:42:12.573Z] [32minfo[39m: Request came for search
+[2024-02-12T14:42:15.733Z] [32minfo[39m: Request came for shops
+[2024-02-12T14:42:17.207Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-12T15:06:07.606Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:06:08.218Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:06:08.219Z] [31merror[39m: jwt malformed
+[2024-02-12T15:30:21.846Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:41:36.244Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:42:10.402Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:42:13.907Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:42:49.562Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:43:28.926Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:45:26.126Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:46:48.666Z] [32minfo[39m: Request came for getting user
+[2024-02-12T15:50:07.042Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:00:18.194Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:03:39.465Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:04:10.363Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:04:30.265Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:55:37.530Z] [32minfo[39m: Request came for getting user
+[2024-02-12T16:56:07.256Z] [32minfo[39m: Request came for getting user
+[2024-02-12T18:17:39.148Z] [32minfo[39m: Request came for getting user
+[2024-02-12T18:18:25.967Z] [32minfo[39m: Request came for search
+[2024-02-12T18:18:29.117Z] [32minfo[39m: Request came for shops
+[2024-02-12T18:18:30.412Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-12T18:45:30.008Z] [32minfo[39m: Request came for login
+[2024-02-12T18:46:01.462Z] [32minfo[39m: Request came for login
+[2024-02-12T18:46:18.481Z] [32minfo[39m: Request came for login
+[2024-02-12T18:49:19.238Z] [32minfo[39m: Request came for shops
+[2024-02-12T18:49:29.072Z] [32minfo[39m: Request came for shops
+[2024-02-12T18:49:43.072Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:06:14.885Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:09:05.837Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:09:35.984Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:09:54.944Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:13:57.996Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:14:02.090Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:20:52.051Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:20:52.734Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:31:09.863Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:31:10.880Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:31:31.309Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:32:09.065Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:32:09.695Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:32:48.242Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:32:49.123Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:33:22.649Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:39:48.393Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:39:49.320Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:39:52.484Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:40:11.139Z] [32minfo[39m: Request came for shops
+[2024-02-12T19:44:02.186Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:44:55.080Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:45:16.512Z] [32minfo[39m: Request came for login
+[2024-02-12T19:49:10.142Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:49:10.945Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:49:47.081Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:49:47.757Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:49:50.556Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:50:05.006Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:50:39.288Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:50:40.213Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:50:43.414Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:50:53.819Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:50:54.458Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:50:55.677Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:50:55.682Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:51:05.632Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:51:05.636Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:51:44.540Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:51:46.448Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:51:46.453Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:52:17.917Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:52:19.389Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:52:19.396Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:52:28.623Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:52:28.626Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:53:08.827Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:53:50.052Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:53:51.214Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:53:55.819Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:53:55.824Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:54:00.217Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:54:00.224Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:54:08.636Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:54:09.293Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:54:12.977Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:54:12.984Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:54:27.652Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:54:28.310Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:54:33.693Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:54:33.698Z] [32minfo[39m: Request came for getting user
+[2024-02-12T19:56:21.604Z] [32minfo[39m: Server is running on port 5000
+[2024-02-12T19:56:22.566Z] [32minfo[39m: Connected to the database
+[2024-02-12T19:56:34.030Z] [32minfo[39m: Request came for cart
+[2024-02-12T19:56:34.041Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:14:54.103Z] [32minfo[39m: Request came for search
+[2024-02-12T20:14:56.128Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-12T20:19:44.030Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:26:43.191Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:28:43.609Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:39:09.221Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:39:45.606Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:44:26.549Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:48:52.448Z] [32minfo[39m: Request came for getting user
+[2024-02-12T20:55:07.390Z] [32minfo[39m: Request came for getting user
+[2024-02-12T21:06:35.639Z] [32minfo[39m: Request came for getting user
+[2024-02-12T21:08:59.043Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:29:54.620Z] [32minfo[39m: Server is running on port 5000
+[2024-02-13T10:29:54.814Z] [32minfo[39m: Request came for login
+[2024-02-13T10:29:56.969Z] [32minfo[39m: Connected to the database
+[2024-02-13T10:30:49.812Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:33:01.569Z] [32minfo[39m: Request came for cart
+[2024-02-13T10:39:38.426Z] [32minfo[39m: Request came for search
+[2024-02-13T10:39:39.821Z] [32minfo[39m: Request came for shops
+[2024-02-13T10:39:41.127Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-13T10:46:21.840Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:48:50.911Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:49:18.478Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:49:59.755Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:50:41.294Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:51:27.620Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:52:14.245Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:52:29.720Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:53:26.666Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:54:33.962Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:55:24.310Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:56:33.588Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:56:45.554Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:56:58.580Z] [32minfo[39m: Request came for getting user
+[2024-02-13T10:57:28.409Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:02:15.329Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:03:13.746Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:07:28.082Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:11:23.390Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:13:45.196Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:15:00.178Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:16:08.523Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:16:11.869Z] [32minfo[39m: Request came for getting user
+[2024-02-13T11:20:06.053Z] [32minfo[39m: Request came for getting user
+[2024-02-13T14:27:58.499Z] [32minfo[39m: Request came for getting user
+[2024-02-13T14:32:47.129Z] [32minfo[39m: Request came for getting user
+[2024-02-14T07:47:13.187Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T07:47:14.158Z] [32minfo[39m: Connected to the database
+[2024-02-14T07:49:52.715Z] [32minfo[39m: Request came for search
+[2024-02-14T07:49:54.544Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T07:50:03.996Z] [32minfo[39m: Request came for getting user
+[2024-02-14T07:50:10.307Z] [32minfo[39m: Request came for search
+[2024-02-14T07:50:11.805Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T09:03:59.358Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T09:04:00.125Z] [32minfo[39m: Connected to the database
+[2024-02-14T09:07:59.404Z] [32minfo[39m: Request came for getting user
+[2024-02-14T09:08:36.505Z] [32minfo[39m: Request came for getting user
+[2024-02-14T14:11:56.700Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T14:11:58.272Z] [32minfo[39m: Connected to the database
+[2024-02-14T14:12:03.289Z] [32minfo[39m: Request came for getting user
+[2024-02-14T14:17:17.481Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T14:17:39.168Z] [31merror[39m: connect ETIMEDOUT 43.204.186.106:27017
+[2024-02-14T14:17:52.189Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T14:17:56.136Z] [32minfo[39m: Connected to the database
+[2024-02-14T15:27:03.440Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:32:20.562Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:33:41.465Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:34:14.957Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:37:38.674Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:38:46.302Z] [32minfo[39m: Request came for getting user
+[2024-02-14T15:41:25.543Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:02:30.688Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:02:43.215Z] [32minfo[39m: Request came for search
+[2024-02-14T16:02:44.609Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:02:45.232Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:03:03.536Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:04:47.170Z] [32minfo[39m: Request came for search
+[2024-02-14T16:04:48.594Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:04:49.472Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:06:10.948Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:06:13.613Z] [32minfo[39m: Request came for search
+[2024-02-14T16:06:15.108Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:06:15.545Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:07:04.451Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:07:07.093Z] [32minfo[39m: Request came for search
+[2024-02-14T16:07:08.531Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:07:09.160Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:08:34.357Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:08:36.631Z] [32minfo[39m: Request came for search
+[2024-02-14T16:08:39.819Z] [32minfo[39m: Request came for search
+[2024-02-14T16:08:41.231Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:08:41.870Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:08:49.190Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:12:07.011Z] [32minfo[39m: Request came for search
+[2024-02-14T16:12:08.566Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:12:09.029Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:12:27.469Z] [32minfo[39m: Request came for search
+[2024-02-14T16:12:28.786Z] [32minfo[39m: Request came for shops
+[2024-02-14T16:12:29.238Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T16:35:44.095Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T16:35:46.978Z] [32minfo[39m: Request came for getting user
+[2024-02-14T16:35:47.571Z] [32minfo[39m: Connected to the database
+[2024-02-14T16:35:47.997Z] [32minfo[39m: Request came for getting user

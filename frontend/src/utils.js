@@ -17,7 +17,7 @@ const verifyRegisterData = (data) => {
     if(!name || !role || !email || !password || !phone_number){
         return false;
     }
-    if(role!=="customer" && role!=="shop"){
+    if(role!="customer" && role!="shop"){
         return false;
     }
     return emailRegex.test(email) && passwordRegex.test(password) && phoneNumberRegex.test(phone_number);

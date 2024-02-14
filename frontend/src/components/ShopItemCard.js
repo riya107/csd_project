@@ -6,8 +6,17 @@ import "../css/ShopItemCard.css";
 const ShopItemCard = ({ data }) => {
   const [q, setQ] = useState(0);
   const handlePlus = () => {
+    console.log("data: ", data)
     if(q<5){
-        setQ(q+1);
+      setQ(q+1);
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      if (!cart) {
+        cart = [data];
+      }
+      else {cart = [...cart, data]
+      }
+      cart=JSON.stringify(cart)
+      localStorage.setItem("cart", cart);
     }
     else{
         alert("You can add maximum 5 items!");

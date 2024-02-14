@@ -14,6 +14,7 @@ const User = require("../models/User");
 const logger = require("../logger");
 
 exports.restrict = async (req, res, next) => {
+  console.log("middleware called")
   logger.info("Inside restrict middleware");
   try {
     const token = req.headers.authorization;
@@ -42,6 +43,7 @@ exports.restrict = async (req, res, next) => {
 
 exports.allowOnlyCustomers = (req, res, next) => {
   logger.info("Inside allowOnlyCustomers middleware");
+  console.log("allowOnlyCustomers called.")
   if (req.user.role === "customer") {
     next();
   } else {
@@ -53,6 +55,7 @@ exports.allowOnlyCustomers = (req, res, next) => {
 
 exports.allowOnlyShops = (req, res, next) => {
   logger.info("Inside allowOnlyShops middleware");
+  console.log("allowOnly Shops middleware called")
   if (req.user.role === "shop") {
     next();
   } else {
@@ -64,6 +67,7 @@ exports.allowOnlyShops = (req, res, next) => {
 
 exports.uploadInFirebase = async (req, res, next) => {
   logger.info("Inside uploadInFirebase middleware");
+  console.log("Inside uploadInFireBase middleware")
   const file = req.file;
   const fileName = Date.now() + "-" + file.originalname;
   const storage = getStorage(firebase_app);
