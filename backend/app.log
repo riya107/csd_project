@@ -921,3 +921,41 @@
 [2024-02-11T09:55:47.171Z] [32minfo[39m: Request came for search
 [2024-02-11T09:55:49.635Z] [32minfo[39m: Request came for shops
 [2024-02-11T09:55:55.040Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-11T15:50:40.417Z] [32minfo[39m: Server is running on port 5000
+[2024-02-11T15:50:59.540Z] [32minfo[39m: Connected to the database
+[2024-02-11T15:52:58.343Z] [32minfo[39m: Request came for getting user
+[2024-02-11T15:53:25.751Z] [32minfo[39m: Request came for login
+[2024-02-11T15:53:30.913Z] [32minfo[39m: Inside restrict middleware
+[2024-02-11T15:53:30.945Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-11T15:53:30.946Z] [32minfo[39m: Request came for getting menu
+[2024-02-11T15:53:40.993Z] [32minfo[39m: Inside restrict middleware
+[2024-02-11T15:53:41.022Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-11T15:53:41.022Z] [32minfo[39m: Request came for getting menu
+[2024-02-11T15:53:48.657Z] [32minfo[39m: Request came for login
+[2024-02-11T15:54:06.506Z] [32minfo[39m: Request came for login
+[2024-02-11T15:54:11.127Z] [32minfo[39m: Request came for search
+[2024-02-11T15:54:12.825Z] [32minfo[39m: Request came for shops
+[2024-02-11T15:54:14.399Z] [32minfo[39m: Request came for items of shop wiith ID = 65b92510955f9046292ca2dd
+[2024-02-11T15:54:21.615Z] [32minfo[39m: Request came for search
+[2024-02-11T15:54:23.007Z] [32minfo[39m: Request came for items of shop wiith ID = 65b92567955f9046292ca2e1
+[2024-02-11T15:54:25.876Z] [32minfo[39m: Request came for shops
+[2024-02-11T15:54:26.950Z] [32minfo[39m: Request came for items of shop wiith ID = 65b92510955f9046292ca2dd
+[2024-02-11T15:54:33.794Z] [32minfo[39m: Request came for search
+[2024-02-11T15:54:35.034Z] [32minfo[39m: Request came for shops
+[2024-02-11T15:54:36.283Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T03:34:18.441Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T03:34:19.525Z] [32minfo[39m: Connected to the database
+[2024-02-14T03:36:43.455Z] [32minfo[39m: Request came for getting user
+[2024-02-14T03:37:24.526Z] [32minfo[39m: Server is running on port 5000
+[2024-02-14T03:37:25.608Z] [32minfo[39m: Connected to the database
+[2024-02-14T05:12:49.743Z] [32minfo[39m: Request came for getting user
+[2024-02-14T05:12:55.723Z] [32minfo[39m: Request came for search
+[2024-02-14T05:12:57.643Z] [32minfo[39m: Request came for shops
+[2024-02-14T05:12:58.802Z] [32minfo[39m: Request came for items of shop wiith ID = 65b92510955f9046292ca2dd
+[2024-02-14T05:13:02.248Z] [32minfo[39m: Request came for items of shop wiith ID = 65b922da44f066af7d285ffc
+[2024-02-14T05:13:20.663Z] [32minfo[39m: Request came for login
+[2024-02-14T05:16:37.081Z] [32minfo[39m: Request came for signup
+[2024-02-14T05:17:49.096Z] [32minfo[39m: Request came for signup
+[2024-02-14T05:18:01.710Z] [32minfo[39m: Inside restrict middleware
+[2024-02-14T05:18:01.774Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-14T05:18:01.775Z] [32minfo[39m: Request came for getting menu
