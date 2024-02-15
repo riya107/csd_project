@@ -1,0 +1,45 @@
+.orderPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align items at the top */
+    padding-top: 20px;
+    /* Add some top padding */
+}
+
+.orderContainer {
+    max-width: 600px;
+    /* Set the maximum width */
+    width: 100%;
+    /* Ensure it takes full width if content is smaller */
+}
+
+
+.orderListItem {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.orderAvatar {
+    background-color: #f0f0f0;
+}
+
+.orderButtons {
+    margin-right: 10px;
+}
+
+
+.orderListItem {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.orderAvatar {
+    background-color: #f0f0f0;
+}
+
+.orderButtons {
+    margin-right: 10px;
+}

@@ -1,12 +1,12 @@
-import { Outlet } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import { MdFastfood } from "react-icons/md";
 import AppContext from "../context/AppContext";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBox from "./SearchBox";
-import { userGetterAPI } from "../api-calls/user-api-calls";
-
 import "../css/NavBar.css";
+import { userGetterAPI } from "../api-calls/user-api-calls";
+import socket from "../customSocket";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -19,11 +19,17 @@ const NavBar = () => {
       const res = await userGetterAPI();
       if (res) {
         setUser(res.user);
+        if (res.user && res.user.role === "shop") {
+          socket.emit("shopJoin", res.user._id.toString());
+        } else if (res.user && res.user.role === "customer") {
+          socket.emit("customerJoin", res.user._id.toString());
+        }
       }
     })();
   }, [setUser]);
 
   const handleLogout = () => {
+    socket.disconnect();
     setSelected("logout");
     localStorage.removeItem("token");
     setUser(null);
@@ -110,6 +116,19 @@ const NavBar = () => {
               setSearchQuery={setSearchQuery}
             />
           )}
+          {user && user.role === "customer" && <div
+            onClick={() => {
+              setSelected("orders");
+              navigate("/orders");
+            }}
+            style={{
+              borderBottom:
+                selected === "orders" && "3px solid var(--primary-color)",
+            }}
+          >
+            Orders
+          </div>
+          }
           <div
             onClick={() => {
               setSelected("about");

@@ -3,10 +3,11 @@ import "../css/Login.css";
 import AppContext from "../context/AppContext";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import socket from "../customSocket";
 
 const Login = () => {
   const navigate = useNavigate();
-  const {setUser} = useContext(AppContext);
+  const { setUser } = useContext(AppContext);
   const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
@@ -19,20 +20,41 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const res = await loginAPI(loginUser);
-    if(res){
+    if (res) {
       setUser(res.user);
-      localStorage.setItem("token",res.token);
+      if (socket.connected) {
+        if (res.user && res.user.role === "shop") {
+          socket.emit("shopJoin", res.user._id.toString());
+        } else if (res.user && res.user.role === "customer") {
+          socket.emit("customerJoin", res.user._id.toString());
+        }
+      } else {
+        socket.connect();
+        socket.once("connect", () => {
+          if (res.user && res.user.role === "shop") {
+            socket.emit("shopJoin", res.user._id.toString());
+          } else if (res.user && res.user.role === "customer") {
+            socket.emit("customerJoin", res.user._id.toString());
+          }
+        });
+      }
+      localStorage.setItem("token", res.token);
       alert("Login Successful!");
       navigate("/");
-    }
-    else{
+    } else {
       alert("Recheck your details!");
     }
-  }
+  };
 
   return (
     <form className="login-form">
-      <input onChange={onChangeLoginForm} name="email" placeholder="Email" type="email" autoComplete="off" />
+      <input
+        onChange={onChangeLoginForm}
+        name="email"
+        placeholder="Email"
+        type="email"
+        autoComplete="off"
+      />
       <input
         onChange={onChangeLoginForm}
         name="password"

@@ -1,5 +1,7 @@
 const FoodItem = require("../models/FoodItem");
 const User = require("../models/User");
+const Order = require("../models/Order");
+
 const logger = require("../logger");
 
 exports.search = async (req, res) => {
@@ -34,7 +36,7 @@ exports.search = async (req, res) => {
 };
 
 exports.getItemsByShopId = async (req, res) => {
-  logger.info(`Request came for items of shop wiith ID = ${req.params._id}`);
+  logger.info(`Request came for items of shop with ID = ${req.params._id}`);
   try {
     const foodItems = await FoodItem.find({ shop_id:req.params._id });
     return res
@@ -82,6 +84,25 @@ exports.getShopsByItemName = async (req, res) => {
       shops:shops,
       message: "process successful",
     });
+  } catch (error) {
+    logger.error(error);
+    return res
+      .status(500)
+      .json({ success: false, message: "internal server error" });
+  }
+};
+
+exports.getCustomerOrders = async (req, res) => {
+  logger.info(`Request came for orders of customer with ID = ${req.user._id}`);
+  try {
+    const orders = await Order.find({ customer_id:req.user._id });
+    return res
+      .status(200)
+      .json({
+        success: true,
+        orders: orders,
+        message: "process successful",
+      });
   } catch (error) {
     logger.error(error);
     return res

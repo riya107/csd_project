@@ -16,7 +16,6 @@ const ShopCard = ({ data }) => {
             alert("OOPS! No Result Found");
         }
         else{
-            console.log(foodItems);
             navigate('/shop-items', { state: { foodItems, shopName:data.name} });
         }
     }

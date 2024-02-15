@@ -4,6 +4,7 @@ import {registerAPI} from "../api-calls/user-api-calls";
 import AppContext from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import {verifyRegisterData} from "../utils";
+import socket from "../customSocket";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -30,6 +31,22 @@ const Register = () => {
     const res = await registerAPI(registerUser);
     if(res){
       setUser(res.user);
+      if (socket.connected) {
+        if (res.user && res.user.role === "shop") {
+          socket.emit("shopJoin", res.user._id.toString());
+        } else if (res.user && res.user.role === "customer") {
+          socket.emit("customerJoin", res.user._id.toString());
+        }
+      } else {
+        socket.connect();
+        socket.once("connect", () => {
+          if (res.user && res.user.role === "shop") {
+            socket.emit("shopJoin", res.user._id.toString());
+          } else if (res.user && res.user.role === "customer") {
+            socket.emit("customerJoin", res.user._id.toString());
+          }
+        });
+      }
       localStorage.setItem("token",res.token);
       alert("Registration Successful!");
       navigate("/");

@@ -3,8 +3,10 @@ import ShopItemCard from "./ShopItemCard";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ShopItems = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const { foodItems, shopName } = location.state;
   const radios = [
@@ -16,22 +18,28 @@ const ShopItems = () => {
   const [cart, setCart] = useState([]);
 
   const placeOrder = () => {
-    if(cart.length===0){
-        alert("Add food items first!");
+    if (cart.length === 0) {
+      alert("Add food items first!");
+    } else {
+      navigate("/cart", {
+        state: { cart, shop_id: foodItems[0].shop_id },
+      });
     }
-    else{
-        
-    }
-  }
+  };
 
   return (
     <div>
       <div className="shop-items-name">{shopName}</div>
-      <div onClick={placeOrder} className="place-order rounded border border-danger bg-danger text-light m-2 position-fixed p-2">Place Order</div>
+      <div
+        onClick={placeOrder}
+        className="place-order rounded border border-danger bg-danger text-light m-2 position-fixed p-2"
+      >
+        Go to Cart
+      </div>
       <ButtonGroup className="m-2 position-fixed">
         {radios.map((radio, idx) => (
           <ToggleButton
-          className="bg-dark"
+            className="bg-dark"
             key={idx}
             id={`radio-${idx}`}
             type="radio"
@@ -47,7 +55,9 @@ const ShopItems = () => {
       </ButtonGroup>
       <div className="food-items">
         {foodItems.map((e, i) => {
-          return <ShopItemCard key={i} data={e} />;
+          return (
+            <ShopItemCard key={i} data={e} cart={cart} setCart={setCart} />
+          );
         })}
       </div>
     </div>
