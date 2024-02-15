@@ -18,37 +18,52 @@ const updateMenuAPI = async (data) => {
 };
 
 const getMenuAPI = async () => {
-    try {
-      const res = await axios({
-        method: "get",
-        url: `${process.env.REACT_APP_API_URL}/api/v1/shop/menu`,
-        headers: {
-          "Authorization": localStorage.getItem("token")
-        }
-      });
-      return res.data;
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
-  };
-
-  const deleteItemAPI = async (_id) => {
-    try{
-      const res = await axios({
-        method: "delete",
-        url: `${process.env.REACT_APP_API_URL}/api/v1/shop/delete-item/${_id}`,
-        headers: {
-          "Authorization": localStorage.getItem("token")
-        }
-      });
-      return res.data;
-    }
-    catch(error){
-      console.log(error);
-      return null;
-    }
+  try {
+    const res = await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_API_URL}/api/v1/shop/menu`,
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
   }
-  
+};
 
-export { updateMenuAPI, getMenuAPI, deleteItemAPI};
+const deleteItemAPI = async (_id) => {
+  try {
+    const res = await axios({
+      method: "delete",
+      url: `${process.env.REACT_APP_API_URL}/api/v1/shop/delete-item/${_id}`,
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+const updateItemAPI = async (_id,itemName,itemPrice) => {
+  try {
+    const res = await axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}/api/v1/shop/update-item/${_id}`,
+      data: {itemName,itemPrice},
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+export { updateMenuAPI, getMenuAPI, deleteItemAPI, updateItemAPI };

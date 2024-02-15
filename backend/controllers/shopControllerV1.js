@@ -82,10 +82,10 @@ exports.getShopOrders = async (req, res) => {
   }
 };
 
-exports.deleteItem = async (req,res) => {
+exports.deleteItem = async (req, res) => {
   logger.info(`Request came for deleting an item`);
   try {
-    await FoodItem.findByIdAndDelete({_id:req.params._id});
+    await FoodItem.findByIdAndDelete({ _id: req.params._id });
     return res.status(200).json({
       success: true,
       message: "process successful",
@@ -96,4 +96,36 @@ exports.deleteItem = async (req,res) => {
       .status(500)
       .json({ success: false, message: "internal server error" });
   }
-}
+};
+
+exports.updateItem = async (req, res) => {
+  logger.info(`Request came for updating item`);
+  try {
+    const existingItem = await FoodItem.find({
+      itemName: req.body.itemName,
+      shop_id: req.user._id,
+      _id:{$ne:req.params._id}
+    });
+
+    if (existingItem.length !== 0) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Duplicate Item" });
+    }
+
+    await FoodItem.findByIdAndUpdate(
+      { _id: req.params._id },
+      { itemName: req.body.itemName, itemPrice: req.body.itemPrice }
+    );
+    return res.status(200).json({
+      success: true,
+      message: "process successful",
+    });
+  } catch (error) {
+    logger.error(error);
+    return res
+      .status(500)
+      .json({ success: false, message: "internal server error" });
+  }
+};
+

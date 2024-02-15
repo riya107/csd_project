@@ -15,7 +15,18 @@ const AddMenu = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    if(!itemName || !itemPrice || !image || !type){
+      alert("Enter details carefully");
+      return ;
+    }
+    if(!Number.isInteger(Number(itemPrice))){
+      alert("Price should be an integer");
+      return ;
+    }
+    if(itemPrice<1 || itemPrice>2000){
+      alert("Price limit is from 1-2000");
+      return ;
+    }
     const formData = new FormData();
     formData.append('itemName', itemName);
     formData.append('itemPrice', itemPrice);

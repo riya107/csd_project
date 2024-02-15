@@ -7,6 +7,7 @@ const {
 
 const {
   updateMenu,
+  updateItem,
   getMenu,
   getShopOrders,
   deleteItem,
@@ -32,5 +33,7 @@ router.get("/menu", restrict, allowOnlyShops, getMenu);
 router.get("/orders", restrict, allowOnlyShops, getShopOrders);
 
 router.delete("/delete-item/:_id", restrict, allowOnlyShops, deleteItem);
+
+router.patch("/update-item/:_id", restrict, allowOnlyShops, updateItem);
 
 module.exports = router;

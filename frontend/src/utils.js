@@ -2,16 +2,6 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$/;
 const phoneNumberRegex = /^\d{10}$/;
 
-const verifyLoginData = (data) => {
-    const {email,password} = data;
-
-    if(!email || !password){
-        return false;
-    }
-
-    return emailRegex.test(email) && passwordRegex.test(password);
-};
-
 const verifyRegisterData = (data) => {
     const {name, role, email, password, phone_number} = data;
     if(!name || !role || !email || !password || !phone_number){
@@ -23,4 +13,4 @@ const verifyRegisterData = (data) => {
     return emailRegex.test(email) && passwordRegex.test(password) && phoneNumberRegex.test(phone_number);
 };
 
-module.exports = {verifyLoginData, verifyRegisterData};
+module.exports = {verifyRegisterData};
