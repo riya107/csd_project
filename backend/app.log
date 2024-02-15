@@ -1974,3 +1974,21 @@
 [2024-02-14T17:04:36.513Z] [32minfo[39m: Connected to the database
 [2024-02-15T06:23:20.594Z] [32minfo[39m: Server is running on port 5000
 [2024-02-15T06:23:23.143Z] [32minfo[39m: Connected to the database
+[2024-02-15T06:24:51.327Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T06:24:56.995Z] [32minfo[39m: Connected to the database
+[2024-02-15T06:25:23.098Z] [32minfo[39m: Request came for getting user
+[2024-02-15T06:25:23.106Z] [32minfo[39m: New socket connection
+[2024-02-15T06:26:44.720Z] [32minfo[39m: Request came for signup
+[2024-02-15T06:26:45.037Z] [32minfo[39m: Customer joined with ID: 65cdaea485d94604c1d15144
+[2024-02-15T06:26:51.635Z] [32minfo[39m: Socket disconnected
+[2024-02-15T06:27:20.365Z] [32minfo[39m: Request came for login
+[2024-02-15T06:27:22.101Z] [32minfo[39m: New socket connection
+[2024-02-15T06:27:22.103Z] [32minfo[39m: Customer joined with ID: 65cdaea485d94604c1d15144
+[2024-02-15T06:27:26.437Z] [32minfo[39m: Request came for search
+[2024-02-15T06:27:28.629Z] [32minfo[39m: Request came for shops
+[2024-02-15T06:27:29.605Z] [32minfo[39m: Request came for items of shop with ID = 65b922da44f066af7d285ffc
+[2024-02-15T06:27:42.995Z] [32minfo[39m: Request came for search
+[2024-02-15T06:27:44.521Z] [32minfo[39m: Request came for shops
+[2024-02-15T06:27:45.171Z] [32minfo[39m: Request came for items of shop with ID = 65b922da44f066af7d285ffc
+[2024-02-15T06:27:53.143Z] [32minfo[39m: New order placed for shop with ID: undefined
+[2024-02-15T06:28:09.682Z] [32minfo[39m: Socket disconnected
