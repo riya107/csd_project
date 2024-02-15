@@ -25,6 +25,9 @@ const Menu = () => {
             image={e.image}
             type={e.type}
             itemPrice={e.itemPrice}
+            foodItems={foodItems}
+            setFoodItems={setFoodItems}
+            id={e._id}
           />
         );
       })}

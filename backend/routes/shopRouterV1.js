@@ -5,7 +5,12 @@ const {
   uploadInFirebase,
 } = require("../middlewares/middlewares");
 
-const { updateMenu, getMenu, getShopOrders } = require("../controllers/shopControllerV1");
+const {
+  updateMenu,
+  getMenu,
+  getShopOrders,
+  deleteItem,
+} = require("../controllers/shopControllerV1");
 
 const multer = require("multer");
 
@@ -22,18 +27,10 @@ router.post(
   updateMenu
 );
 
-router.get(
-  "/menu",
-  restrict,
-  allowOnlyShops,
-  getMenu
-);
+router.get("/menu", restrict, allowOnlyShops, getMenu);
 
-router.get(
-  "/orders",
-  restrict,
-  allowOnlyShops,
-  getShopOrders
-);
+router.get("/orders", restrict, allowOnlyShops, getShopOrders);
+
+router.delete("/delete-item/:_id", restrict, allowOnlyShops, deleteItem);
 
 module.exports = router;

@@ -2130,3 +2130,99 @@
 [2024-02-15T07:21:21.150Z] [32minfo[39m: Request came for items of shop with ID = 65b922da44f066af7d285ffc
 [2024-02-15T07:21:22.670Z] [32minfo[39m: Request came for items of shop with ID = 65b922da44f066af7d285ffc
 [2024-02-15T07:21:25.004Z] [32minfo[39m: Request came for items of shop with ID = 65b922da44f066af7d285ffc
+[2024-02-15T07:23:22.120Z] [32minfo[39m: Socket disconnected
+[2024-02-15T07:23:34.830Z] [32minfo[39m: Request came for login
+[2024-02-15T07:23:36.423Z] [32minfo[39m: New socket connection
+[2024-02-15T07:23:36.426Z] [32minfo[39m: Shop joined with ID: 65b922da44f066af7d285ffc
+[2024-02-15T07:23:40.151Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:23:40.180Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:23:40.181Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:25:13.301Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:25:13.460Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:13.542Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:14.094Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:25:21.495Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:25:22.052Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:25:22.091Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:22.113Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:28.266Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:25:28.421Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:28.747Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:25:29.114Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:53.021Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:25:53.177Z] [32minfo[39m: New socket connection
+[2024-02-15T07:25:53.425Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:25:57.123Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:02.707Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:03.094Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:03.110Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:04.567Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:04.963Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:26:05.091Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:05.097Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:06.602Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:07.050Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:26:07.094Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:07.101Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:09.138Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:14.674Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:18.369Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:20.713Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:21.140Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:21.194Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:26:23.106Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:41.236Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:26:41.434Z] [32minfo[39m: New socket connection
+[2024-02-15T07:26:41.658Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:26:42.083Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:04.542Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:04.968Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:05.095Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:05.107Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:06.498Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:06.611Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:06.931Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:07.087Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:34.869Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:35.485Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:36.118Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:36.124Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:38.235Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:38.394Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:38.668Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:39.087Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:40.913Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:41.100Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:41.101Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:41.339Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:45.193Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:45.430Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:48.537Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:48.637Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:49.223Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:53.099Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:53.164Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:53.169Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:53.684Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:27:58.177Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:27:58.486Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:58.525Z] [32minfo[39m: New socket connection
+[2024-02-15T07:27:58.851Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:28:42.106Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:28:42.155Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:28:42.157Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:28:52.098Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:28:52.133Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:28:52.133Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:29:01.098Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:29:01.125Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:29:01.126Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:30:54.096Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:30:54.126Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:30:54.127Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:30:55.096Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:30:55.124Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:30:55.125Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:31:03.094Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:31:03.382Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:31:03.383Z] [32minfo[39m: Request came for getting menu

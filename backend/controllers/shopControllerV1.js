@@ -81,3 +81,19 @@ exports.getShopOrders = async (req, res) => {
       .json({ success: false, message: "internal server error" });
   }
 };
+
+exports.deleteItem = async (req,res) => {
+  logger.info(`Request came for deleting an item`);
+  try {
+    await FoodItem.findByIdAndDelete({_id:req.params._id});
+    return res.status(200).json({
+      success: true,
+      message: "process successful",
+    });
+  } catch (error) {
+    logger.error(error);
+    return res
+      .status(500)
+      .json({ success: false, message: "internal server error" });
+  }
+}
