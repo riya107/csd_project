@@ -15,6 +15,10 @@ body {
     box-sizing: border-box;
 }
 
+.cp{
+    cursor: pointer;
+}
+
 .col-p {
     color: var(--primary-color);
 }

@@ -101,7 +101,11 @@ exports.getShopsByItemName = async (req, res) => {
 exports.getCustomerOrders = async (req, res) => {
   logger.info(`Request came for orders of customer with ID = ${req.user._id}`);
   try {
-    const orders = await Order.find({ customer_id:req.user._id });
+    const orders = await Order.find({ customer_id:req.user._id }).populate({
+      path: 'shop_id',
+      select: 'name phone_number'
+    }).sort({ updatedAt: -1 });
+
     return res
       .status(200)
       .json({

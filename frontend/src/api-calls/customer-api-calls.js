@@ -52,4 +52,20 @@ const getShopsByItemNameAPI = async (name) => {
   }
 };
 
-export { searchResultsAPI, getItemsByShopIdAPI, getShopsByItemNameAPI };
+const getCustomerOrdersAPI = async () => {
+  try {
+    const res = await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_API_URL}/api/v1/customer/orders`,
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    });
+    return res.data.orders;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+export { searchResultsAPI, getItemsByShopIdAPI, getShopsByItemNameAPI, getCustomerOrdersAPI };

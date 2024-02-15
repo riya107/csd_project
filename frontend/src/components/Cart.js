@@ -16,12 +16,12 @@ const Cart = () => {
 
   const handlePlaceOrder = async () => {
     socket.emit("placeOrder", {
-      shopId: shop_id.to,
+      shopId: shop_id,
       order: {
         shop_id,
         customer_id: user._id,
         items: cart,
-        totol_price: total,
+        total_price: total,
         status: "Placed",
       },
     });

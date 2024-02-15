@@ -66,4 +66,20 @@ const updateItemAPI = async (_id,itemName,itemPrice) => {
   }
 };
 
-export { updateMenuAPI, getMenuAPI, deleteItemAPI, updateItemAPI };
+const getShopOrdersAPI = async () => {
+  try {
+    const res = await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_API_URL}/api/v1/shop/orders`,
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    });
+    return res.data.orders;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+export { updateMenuAPI, getMenuAPI, deleteItemAPI, updateItemAPI, getShopOrdersAPI };

@@ -68,6 +68,9 @@ exports.getShopOrders = async (req, res) => {
     const orders = await Order.find({
       shop_id: req.user._id,
       $or: [{ status: "Placed" }, { status: "Accepted" }],
+    }).populate({
+      path: 'customer_id',
+      select: 'name phone_number'
     }).sort({ updatedAt: -1 });
     return res.status(200).json({
       success: true,

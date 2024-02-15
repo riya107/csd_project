@@ -32,31 +32,36 @@ io.on('connection', socket => {
   socket.on('placeOrder', async ({ shopId, order }) => {
       logger.info(`New order placed for shop with ID: ${shopId}`);
       const room = io.sockets.adapter.rooms.get(shopId);
-
       if(room){
         const createdOrder = await (new Order(order)).save();
-        socket.to(shopId.toString()).emit('newOrder', createdOrder);
+        const response = await Order.findById({
+          _id: createdOrder._id,
+        }).populate({
+          path: 'customer_id',
+          select: 'name phone_number'
+        }).sort({ updatedAt: -1 });
+        io.to(shopId.toString()).emit('newOrder', response);
       }
       else{
         order.status = "Declined";
         const createdOrder = await (new Order(order)).save();
-        socket.to((order.customer_id).toString()).emit('orderDeclined',createdOrder);
+        io.to((order.customer_id).toString()).emit('orderDeclined',createdOrder._id);
       }
   });
 
   socket.on('acceptOrder', async ({ customerId, orderId }) => {
     await Order.findByIdAndUpdate({_id:orderId},{status:"Accepted"});
-    socket.to(customerId.toString()).emit('orderAccepted', orderId);
+    io.to(customerId.toString()).emit('orderAccepted', orderId);
   });
 
   socket.on('declineOrder', async ({ customerId, orderId }) => {
     await Order.findByIdAndUpdate({_id:orderId},{status:"Declined"});
-    socket.to(customerId.toString()).emit('orderDeclined', orderId);
+    io.to(customerId.toString()).emit('orderDeclined', orderId);
   });
 
-  socket.on('orderDelivered', async ({ customerId, orderId }) => {
+  socket.on('deliverOrder', async ({ customerId, orderId }) => {
     await Order.findByIdAndUpdate({_id:orderId},{status:"Delivered"}); 
-    socket.to(customerId.toString()).emit('orderDelivered', orderId);
+    io.to(customerId.toString()).emit('orderDelivered', orderId);
   });
 
   socket.on('disconnect', () => {
