@@ -17,7 +17,7 @@ const navigate = useNavigate();
         alert("OOPS! No Result Found");
     }
     else{
-        navigate('/shop-items', { state: { foodItems, shopName:data.name} });
+        navigate('/shop-items', { state: { foodItems, shopName:data.name, shop_id:data._id} });
     }
   };
 

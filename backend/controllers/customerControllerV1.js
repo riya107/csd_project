@@ -38,7 +38,13 @@ exports.search = async (req, res) => {
 exports.getItemsByShopId = async (req, res) => {
   logger.info(`Request came for items of shop with ID = ${req.params._id}`);
   try {
-    const foodItems = await FoodItem.find({ shop_id:req.params._id });
+    let foodItems;
+    if(req.query.type){
+      foodItems = await FoodItem.find({ shop_id:req.params._id,type:req.query.type });
+    }
+    else{
+      foodItems = await FoodItem.find({ shop_id:req.params._id });
+    }
     return res
       .status(200)
       .json({
