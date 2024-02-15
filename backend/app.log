@@ -2226,3 +2226,36 @@
 [2024-02-15T07:31:03.094Z] [32minfo[39m: Inside restrict middleware
 [2024-02-15T07:31:03.382Z] [32minfo[39m: Inside allowOnlyShops middleware
 [2024-02-15T07:31:03.383Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:34:31.453Z] [32minfo[39m: Server is running on port 5000
+[2024-02-15T07:34:31.674Z] [32minfo[39m: New socket connection
+[2024-02-15T07:34:31.677Z] [32minfo[39m: New socket connection
+[2024-02-15T07:34:32.090Z] [32minfo[39m: Connected to the database
+[2024-02-15T07:38:48.418Z] [32minfo[39m: Socket disconnected
+[2024-02-15T07:38:49.031Z] [32minfo[39m: New socket connection
+[2024-02-15T07:38:49.033Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:38:49.051Z] [32minfo[39m: Request came for getting user
+[2024-02-15T07:38:49.088Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:38:49.089Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:38:49.117Z] [32minfo[39m: Shop joined with ID: 65b922da44f066af7d285ffc
+[2024-02-15T07:39:22.116Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:39:22.144Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:39:22.145Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:40:01.100Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:40:01.130Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:40:01.131Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:40:03.603Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:40:03.638Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:40:03.638Z] [32minfo[39m: Request came for deleting an item
+[2024-02-15T07:40:12.174Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:40:12.208Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:40:12.208Z] [32minfo[39m: Request came for deleting an item
+[2024-02-15T07:40:19.400Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:40:19.430Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:40:19.430Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:40:25.542Z] [32minfo[39m: Socket disconnected
+[2024-02-15T07:40:26.196Z] [32minfo[39m: New socket connection
+[2024-02-15T07:40:26.198Z] [32minfo[39m: Inside restrict middleware
+[2024-02-15T07:40:26.204Z] [32minfo[39m: Request came for getting user
+[2024-02-15T07:40:26.232Z] [32minfo[39m: Inside allowOnlyShops middleware
+[2024-02-15T07:40:26.233Z] [32minfo[39m: Request came for getting menu
+[2024-02-15T07:40:26.245Z] [32minfo[39m: Shop joined with ID: 65b922da44f066af7d285ffc
